@@ -42,31 +42,40 @@ messageForm.addEventListener('submit', function(event) {
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `
     <a href = "mailto:${email}">${name}</a>
-    <span>${message}</span>`;
+    <span >${message}</span>`;
 
 //button to remove message
-    const removeButton = document.createElement('button');
+const removeButton = document.createElement('button');
+function makeRemoveButton() {
     removeButton.innerText = 'Remove';
     removeButton.type = 'button';
-    removeButton.addEventListener('click', () =>{
-        const entry = removeButton.parentNode;
-        entry.removeChild();
+    newMessage.append(removeButton);
+};
+    makeRemoveButton();
+    removeButton.addEventListener('click', (e) =>{
+        removeButton.parentNode.remove();
     });
 
 //button to edit messages
-    const editButton = document.createElement('button');
+const editButton = document.createElement('button');
+function makeEditButton() {
     editButton.innerText = 'Edit';
     editButton.type = 'button';
+    newMessage.append(editButton);
+};
+    makeEditButton();
     editButton.addEventListener('click', () => {
         const editedMessage = prompt('Updated message: ');
         if(editedMessage !== null){
-            messageSpan.textContent = editedMessage;
+            newMessage.innerHTML = `<a href = "mailto:${email}">${name}</a>
+            <span >${editedMessage}</span>`;
+            makeEditButton();
+            makeRemoveButton();
         }
     });
 
     newMessage.appendChild(editButton);
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
-
     messageForm.reset();
 });
