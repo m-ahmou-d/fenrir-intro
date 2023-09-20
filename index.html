@@ -1,4 +1,3 @@
-index.html
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,41 +8,53 @@ index.html
         <meta name="author's github username" content="m-ahmou-d">
         <meta name="school" content="Code the Dream">
         <meta name="class name" content="fenrir (intro to programming)">
+        <link rel="stylesheet" href="css/index.css">
+
+        <h1 id="title-name">Mahmoud Elrmly</h1>
     </head>
 
     <body>
         <section>
-            <h1>About</h1>
-            <p>I'm 22 years old. Born in Tripoli, Libya but have been living in Colorado, USA since 2008! I enjoy coding, sports, and camping.</p>
+            <h1 id="about">About</h1>
+            <p id="about-paragraph">I'm 23 years old. Born in Tripoli, Libya but have been living in Colorado, USA since 2008. I enjoy coding, sports, and camping!</p>
         </section>
         <section>
-            <h1>Experience</h1>
-            <p>I've worked as a server/cook at a Mediterranean Restaurant. Worked multiple transportation jobs: food service, medical transportation, and educational transportation.</p>
+            <h1 id="experience">Experience</h1>
+            <ul id="experience-paragraph">
+                <li><strong>Server/Cook</strong></li>
+                <li><strong>Delivery Driver</strong></li>
+                <li><strong>Computer Science Student</strong> &nbsp; &mdash;
+                    <span class="job-location"> &nbsp;  Front Range Community College</span></li>
+                <li><strong>Educational and Medical Driver</strong> &nbsp; &mdash;
+                    <span class="job-location"> &nbsp;  EverDriven</span></li>
+                <li><strong>Software Engineer Student</strong> &nbsp; &mdash;
+                    <span class="job-location"> &nbsp;  CodeTheDream</span></li>
+            </ul>
         </section>
         <section id="skills">
-            <h2>Skills</h2>
-            <ul></ul>
+            <h2 class="skills">Skills</h2>
+            <ul id="skills-list"></ul>
         </section>
         <section>
-            <h1>Connect</h1>
-            <ul>
-                <li>Email me at: mahmoud.el912@gmail.com</li>
+            <h1 id="connect">Connect</h1>
+            <ul id="connect-list">
+                <li>Email me @ mahmoud.el912@gmail.com</li>
                 <li><a href="https://github.com/m-ahmou-d">Github Profile</a></li>
                 <li><a href="https://www.instagram.com/m.ahmou.d/">Instagram</a></li>
             </ul>
         <section>
-            <h2>Leave a Message</h2>
+            <h2 id="message-board">Leave a Message</h2>
 
             <form name="leave_message">
-                <label for="usersName">Name: </label><input type="text" name="usersName" required="true"><br>
-                <label for="usersEmail">Email: </label><input type="email" name="usersEmail" required="true"><br>
-                <label for="usersMessage">Message: </label><textarea name="usersMessage" required="true"></textarea><br>
+                <label class="message-label" for="usersName">Name </label><input class="message-input" type="text" name="usersName" required="true"><br>
+                <label class="message-label" for="usersEmail">Email </label><input class="message-input" type="email" name="usersEmail" required="true"><br>
+                <label class="message-label" for="usersMessage">Message </label><textarea class="message-input" name="usersMessage" required="true"></textarea><br>
                 <button type="submit">Submit</button>
             </form>
         </section>
         <section id="messages">
-            <h2>Messages</h2>
-            <ul></ul>
+            <h2 id="posted-messages-title">Messages</h2>
+            <ul id="submitted-messages"></ul>
         </section>
         <footer></footer>
         </section>
