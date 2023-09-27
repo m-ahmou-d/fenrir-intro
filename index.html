@@ -1,64 +1,151 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Mahmoud Elrmly
-        </title>
-        <meta name="author" content="Mahmoud Elrmly">
-        <meta name="author's github username" content="m-ahmou-d">
-        <meta name="school" content="Code the Dream">
-        <meta name="class name" content="fenrir (intro to programming)">
-        <link rel="stylesheet" href="css/index.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Mahmoud Elrmly">
+    <meta name="author's github username" content="m-ahmou-d">
+    <meta name="school" content="Code the Dream">
+    <meta name="class name" content="fenrir (intro to programming)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud's Personal Portfolio</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/df9bd27758.js" crossorigin="anonymous"></script>
+</head>
 
-        <h1 id="title-name">Mahmoud Elrmly</h1>
-    </head>
 
-    <body>
-        <section>
-            <h1 id="about">About</h1>
-            <p id="about-paragraph">I'm 23 years old. Born in Tripoli, Libya but have been living in Colorado, USA since 2008. I enjoy coding, sports, and camping!</p>
-        </section>
-        <section>
-            <h1 id="experience">Experience</h1>
-            <ul id="experience-paragraph">
-                <li><strong>Server/Cook</strong></li>
-                <li><strong>Delivery Driver</strong></li>
-                <li><strong>Computer Science Student</strong> &nbsp; &mdash;
-                    <span class="job-location"> &nbsp;  Front Range Community College</span></li>
-                <li><strong>Educational and Medical Driver</strong> &nbsp; &mdash;
-                    <span class="job-location"> &nbsp;  EverDriven</span></li>
-                <li><strong>Software Engineer Student</strong> &nbsp; &mdash;
-                    <span class="job-location"> &nbsp;  CodeTheDream</span></li>
-            </ul>
-        </section>
-        <section id="skills">
-            <h2 class="skills">Skills</h2>
-            <ul id="skills-list"></ul>
-        </section>
-        <section>
-            <h1 id="connect">Connect</h1>
-            <ul id="connect-list">
-                <li>Email me @ mahmoud.el912@gmail.com</li>
-                <li><a href="https://github.com/m-ahmou-d">Github Profile</a></li>
-                <li><a href="https://www.instagram.com/m.ahmou.d/">Instagram</a></li>
-            </ul>
-        <section>
-            <h2 id="message-board">Leave a Message</h2>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="css/images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills & Experience</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <i class="fas fa-times" oneclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" oneclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Aspiring Full-Stack Developer</p>
+            <h1>Hello! I'm <span>Mahmoud</span><br>From Colorado, USA</h1>
+        </div>
+    </div> 
+</div>
 
-            <form name="leave_message">
-                <label class="message-label" for="usersName">Name </label><input class="message-input" type="text" name="usersName" required="true"><br>
-                <label class="message-label" for="usersEmail">Email </label><input class="message-input" type="email" name="usersEmail" required="true"><br>
-                <label class="message-label" for="usersMessage">Message </label><textarea class="message-input" name="usersMessage" required="true"></textarea><br>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        <section id="messages">
-            <h2 id="posted-messages-title">Messages</h2>
-            <ul id="submitted-messages"></ul>
-        </section>
-        <footer></footer>
-        </section>
-        <script src="js/index.js"></script>
-    </body>
+<!--adding script for mobile nav bar menu-->
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-sec-1">
+                <img src="css/images/about.png">
+            </div>
+            <div class="about-sec-2">
+                <h1 class="sub-title">About Me</h1>
+                <p id="about-me-p">I'm a 23-year-old who's passionate about the journey to become a top-notch programmer. I'm on a mission to master the skills of a full-stack developer. 
+                Whether it's working on the user interface or the behind-the-scenes code, I'm always eager to learn and improve. 
+                Each line of code I write is a step toward becoming a more effective problem solver. My goal isn't just about coding; 
+                it's about crafting efficient and practical solutions. 
+                I'm dedicated to continuous learning and growth because I aspire to be the kind of developer who can bring value to any company or team. 
+                I believe in the power of technology to shape the future, and I'm excited about contributing to that future as a skilled and adaptable developer.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul id="skills-list"></ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul id="experience-paragraph">
+                        <li><strong>Computer Science Student</strong> &nbsp; &mdash;
+                            <span class="job-location"> &nbsp;  Front Range Community College</span></li>
+                        <li><strong>Educational and Medical Driver</strong> &nbsp; &mdash;
+                            <span class="job-location"> &nbsp;  EverDriven</span></li>
+                        <li><strong>Software Engineer Student</strong> &nbsp; &mdash;
+                            <span class="job-location"> &nbsp;  CodeTheDream</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--adding script for the 'onetab' showing which skills/experience tab is active-->
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>mahmoud.el912@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>(012) 345-6789</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/m.ahmou.d/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/m-ahmou-d"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <div>
+                    <h2 class="sub-title" id="message-board">Leave a Message</h2>
+                        <form name="leave_message">
+                            <label class="message-label" for="usersName"></label><input class="message-input" type="text" name="usersName" placeholder="Your Name" required="true"><br>
+                            <label class="message-label" for="usersEmail"></label><input class="message-input" type="email" name="usersEmail" placeholder="Your Email" required="true"><br>
+                            <label class="message-label" for="usersMessage"></label><textarea class="message-input" name="usersMessage" placeholder="Your Message" required="true"></textarea><br>
+                            <button type="submit" class="button button2">Submit</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="messages">
+    <ul id="submitted-messages"></ul>
+</div>
+
+
+<footer></footer>
+
+
+<script src="js/index.js"></script>
+
+
+</body>
 </html>
 
