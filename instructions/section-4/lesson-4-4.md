@@ -48,21 +48,21 @@ Now, open the project directory in your code editor and continue to the next sec
 
 For this assignment, there are some general requirements but **the design is up to you!** This is your chance to be creative and transform your webpage into a reflection of who you are.
 
-- [ ] Change the background color of the page body
-- [ ] Change the default text color
-- [ ] Define the font family for the entire page or just a section
+- [ x ] Change the background color of the page body
+- [ x ] Change the default text color
+- [ x ] Define the font family for the entire page or just a section
   - (Optional) Load in a font family from [Google Fonts](https://fonts.google.com/)
-- [ ] Add spacing (padding/margin) between sections
-- [ ] Change the font size, weight, and color of all headings
-- [ ] Transform the "Experience" list items into styled blocks
-- [ ] Transform the "Skills" list items into styled blocks
-- [ ] Style the "Leave a Message" form elements
+- [ x ] Add spacing (padding/margin) between sections
+- [ x ] Change the font size, weight, and color of all headings
+- [ x ] Transform the "Experience" list items into styled blocks
+- [ x ] Transform the "Skills" list items into styled blocks
+- [ x ] Style the "Leave a Message" form elements
   - Change font size and color of labels
   - Change font size, padding, border, etc. of inputs and textarea
   - Add spacing (padding/margin) between form fields
   - Change padding, background color, border, etc. of submit button
-- [ ] Transform the "Messages" list items into styled blocks and customize the remove button (and/or edit button if you have one)
-- [ ] Change the spacing and background color of the footer
+- [ x ] Transform the "Messages" list items into styled blocks and customize the remove button (and/or edit button if you have one)
+- [ x ] Change the spacing and background color of the footer
 
 **This is the basic rubric, but we encourage you to think beyond this list and come up with your own ideas to make your webpage unique!**
 

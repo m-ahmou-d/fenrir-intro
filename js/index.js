@@ -4,20 +4,18 @@ var thisYear = today.getFullYear();
 
 var footer = document.querySelector('footer');
 var copyright = document.createElement('p');
-copyright.innerHTML = `&#169 Mahmoud Elrmly ${thisYear}`;
+copyright.innerHTML = `&#169 MAHMOUD ELRMLY ${thisYear}`;
 footer.appendChild(copyright);
 
 //skills
 const skills = [
-    "Basic Java",
-    "Basic JavaScript",
-    "Basic HTML",
-    "Basic C++",
-    "Customer Service Experience",
-    "Translation ability between English & Arabic (and vice-versa)",
-    "PC Building",
-    "Word, Excel, and PowerPoint",
-    "Certified Transportation Driver"
+    "Java",
+    "JavaScript",
+    "HTML",
+    "C++",
+    "CSS",
+    "English & Arabic Translator",
+    "Word, Excel, and PowerPoint"
 ];
 const skillsSection = document.querySelector('#skills');
 const skillsList = skillsSection.querySelector('ul');
@@ -68,7 +66,7 @@ function makeEditButton() {
         const editedMessage = prompt('Updated message: ');
         if(editedMessage !== null){
             newMessage.innerHTML = `<a href = "mailto:${email}">${name}</a>
-            <span >${editedMessage}</span>`;
+            <span>${editedMessage}</span>`;
             makeEditButton();
             makeRemoveButton();
         }

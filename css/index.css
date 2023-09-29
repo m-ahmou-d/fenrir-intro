@@ -1,0 +1,137 @@
+/* full page background color & default font and color */
+@import url(https://fonts.google.com/specimen/Mooli);
+html {
+    background-color: #11151C;
+    color: #7A7D99;
+    font-family: 'Mooli', sans-serif;
+    font-size: 32px;
+}
+
+#title-name {
+    margin-top: 3%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#title-name:hover {
+    text-decoration: underline #7A7D99;
+    text-underline-offset: auto;
+}
+
+section {
+    padding: 15px;
+}
+
+section h1, h2 {
+    font-size: 0.8rem;
+}
+
+section p, ul, form, label {
+    font-size: 0.6rem;
+}
+
+#experience-paragraph li {
+    list-style: none;
+    border: 2px solid #7A7D99;
+    border-radius: 5px;
+    display: flex;
+    color: #7A7D99;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+#skills-list li {
+    display: inline-block;
+    border: 2px solid #4d7059;
+    border-radius: 5px;
+    color: #4d7059;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+#connect-list li {
+    list-style: none;
+    border: 2px solid #7A7D99;
+    border-radius: 5px;
+    display: inline;
+    color: #7A7D99;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+#experience-paragraph li:hover, #experience-paragraph li:focus, 
+#skills-list li:hover, #skills-list li:focus, 
+#connect-list li:hover, #connect-list li:focus {
+    opacity: 0.75;
+}
+
+#messages {
+    margin-bottom: 10%;
+}
+
+#message-board, #posted-messages-title {
+    margin-left: -15px;
+}
+
+.message-label {
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    background-color: #11151C;
+    color: #7A7D99;
+    border: 1px solid #7A7D99;
+}
+
+.message-input, .message-label {
+    display: block;
+}
+
+button {
+    background-color: #7A7D99;
+    border-radius: 2px;
+    color: #11151C;
+    min-width: 100px;
+    padding: 5px 10px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* make remove button red */
+
+#submitted-messages li {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  
+  #submitted-messages li:first-child {
+    flex-grow: 1;
+  }
+  
+  #submitted-messages li:not(:last-child) {
+    margin-right: 1rem;
+  }
+  
+  #submitted-messages li:not(:last-child) {
+    border-bottom: 1px solid #7A7D99;
+  }
+
+/* work on footer */
+
+footer {
+    background-color: #424146;
+    color: aliceblue;
+    font-family: 'superscript';
+    font-style: italic;
+    border-top: 1px solid #7A7D99;
+    margin-top: 30px;
+    padding: 5px 0;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+}
+
+#copyright {
+    font-size: 8px;
+}
