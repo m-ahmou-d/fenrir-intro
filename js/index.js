@@ -81,21 +81,43 @@ function makeEditButton() {
 });
 
 
-let githubRequest = new XMLHttpRequest();
+// Lesson 6.1 AJAX
+// let githubRequest = new XMLHttpRequest();
 
-githubRequest.open('GET', 'https://api.github.com/users/m-ahmou-d/repos');
-githubRequest.send();
+// githubRequest.open('GET', 'https://api.github.com/users/m-ahmou-d/repos');
+// githubRequest.send();
 
-githubRequest.addEventListener('load', (event) => {
-    let repositories = JSON.parse(githubRequest.response)
-    console.log(repositories);
+// githubRequest.addEventListener('load', (event) => {
+//     let repositories = JSON.parse(githubRequest.response)
+//     console.log(repositories);
 
-    const projectSection = document.getElementById('projects')
-    const projectList = projectSection.querySelector('ul')
+//     const projectSection = document.getElementById('projects')
+//     const projectList = projectSection.querySelector('ul')
 
-    for (let i = 0; i < repositories.length; i++) {
-        let project = document.createElement('li')
-        project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`
-        projectList.appendChild(project)
-    }
-});
+//     for (let i = 0; i < repositories.length; i++) {
+//         let project = document.createElement('li')
+//         project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`
+//         projectList.appendChild(project)
+//     }
+// });
+
+
+// Lesson 6.2 Fetch
+fetchData();
+
+function fetchData() {
+    fetch('https://api.github.com/users/m-ahmou-d/repos')
+    .then(res => res.json())
+    .then(repositories => {
+        let projectSection = document.getElementById('projects')
+        let projectList = projectSection.querySelector('ul')
+        for (let i = 0; i < repositories.length; i++) {
+            let project = document.createElement('li')
+            project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`
+            projectList.appendChild(project)
+    }})
+
+    .catch((error) => {
+        console.error("error fetching data:", error)
+    })
+}
