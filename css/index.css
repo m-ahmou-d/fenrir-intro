@@ -1,137 +1,347 @@
 /* full page background color & default font and color */
 @import url(https://fonts.google.com/specimen/Mooli);
-html {
-    background-color: #11151C;
-    color: #7A7D99;
+*{
+    margin: 0;
+    padding: 0;
     font-family: 'Mooli', sans-serif;
-    font-size: 32px;
+    box-sizing: border-box;
 }
 
-#title-name {
-    margin-top: 3%;
-    text-align: center;
-    font-weight: bold;
+html {
+    scroll-behavior: smooth;
 }
 
-#title-name:hover {
-    text-decoration: underline #7A7D99;
-    text-underline-offset: auto;
+/*------------------ background --------------*/
+
+body {
+    background-color: #000000;
+    color: #7A7D99;
 }
 
-section {
-    padding: 15px;
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/programmer-background.jpg");
+    background-repeat: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-section h1, h2 {
-    font-size: 0.8rem;
+.container {
+    padding: 10px 10%;
 }
 
-section p, ul, form, label {
-    font-size: 0.6rem;
-}
+/*------------------ navigation bar & logo --------------*/
 
-#experience-paragraph li {
-    list-style: none;
-    border: 2px solid #7A7D99;
-    border-radius: 5px;
+nav {
     display: flex;
-    color: #7A7D99;
-    padding: 5px 10px;
-    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;    
 }
 
-#skills-list li {
+.logo {
+    width: 140px;
+}
+
+nav ul li {
     display: inline-block;
-    border: 2px solid #4d7059;
-    border-radius: 5px;
-    color: #4d7059;
-    padding: 5px 10px;
-    margin-right: 5px;
-}
-
-#connect-list li {
     list-style: none;
-    border: 2px solid #7A7D99;
-    border-radius: 5px;
-    display: inline;
-    color: #7A7D99;
-    padding: 5px 10px;
-    margin-bottom: 5px;
+    margin: 10px 20px;
 }
 
-#experience-paragraph li:hover, #experience-paragraph li:focus, 
-#skills-list li:hover, #skills-list li:focus, 
-#connect-list li:hover, #connect-list li:focus {
-    opacity: 0.75;
+nav ul li a {
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
 }
 
-#messages {
-    margin-bottom: 10%;
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
 }
 
-#message-board, #posted-messages-title {
-    margin-left: -15px;
+nav ul li a:hover:after {
+    width: 100%;
 }
 
-.message-label {
-    margin-bottom: 5px;
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    margin-left: -50px;
+    color: #fff;
+}
+.header-text p {
+    margin-left: -50px;
+    color: #fff;
+}
+.header-text h1 span {
+    color:#ff004f;
 }
 
-input[type="text"], input[type="email"], textarea {
-    background-color: #11151C;
-    color: #7A7D99;
-    border: 1px solid #7A7D99;
+/*------------------ about me --------------*/
+
+#about {
+    padding: 80px 0;
+    color:#fff;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.message-input, .message-label {
+.about-sec-1 {
+    flex-basis: 35%;
+}
+.about-sec-1 img {
+    width: 100%;
+}
+.about-sec-2 {
+    flex-basis: 60%;
+}
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+#about-me-p {
+    color:#7A7D99;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 60px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 20px 0;
+    font-size: 20px;
+    color:#7A7D99;
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab {
     display: block;
 }
 
-button {
-    background-color: #7A7D99;
-    border-radius: 2px;
-    color: #11151C;
-    min-width: 100px;
-    padding: 5px 10px;
-    transition: opacity 0.2s ease-in-out;
+/*------------------ projects --------------*/
+
+.button {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
 }
 
-/* make remove button red */
+/*------------------ contact me --------------*/
 
+.contact-left {
+    flex-basis: 35%;
+}
+.contact-right {
+    flex-basis: 60%;
+}
+.contact-left p {
+    margin-top: 30px;
+}
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons {
+    margin-top: 30px;
+}
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.button.button2 {
+    display: inline-block;
+    background:#ff004f;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .button2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/*------------------ message form --------------*/
+#submitted-messages li{
+    border: 150px inset #000000;
+    border-radius: 6px;
+    background-color: #000000;
+}
 #submitted-messages li {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
-  }
-  
-  #submitted-messages li:first-child {
-    flex-grow: 1;
-  }
-  
-  #submitted-messages li:not(:last-child) {
-    margin-right: 1rem;
-  }
-  
-  #submitted-messages li:not(:last-child) {
-    border-bottom: 1px solid #7A7D99;
-  }
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+}
+#submitted-messages li a {
+    color:#ff004f;
+    font-size: 24px;
+}
+#submitted-messages li span {
+    color:#fff;
+}
+.form-button {
+    margin: 10px;
+    cursor: pointer;
+}
+
 
 /* work on footer */
 
 footer {
-    background-color: #424146;
-    color: aliceblue;
-    font-family: 'superscript';
-    font-style: italic;
-    border-top: 1px solid #7A7D99;
-    margin-top: 30px;
-    padding: 5px 0;
     width: 100%;
-    bottom: 0px;
-    left: 0px;
+    text-align: center;
+    padding: 25px 0;
+    background: #ff004f;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #000000;
 }
 
-#copyright {
-    font-size: 8px;
+/*--------------- responsiveness for small screens ----------------*/
+nav .fas {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url("images/programmer-background-phone.jpg");
+    }
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1 {
+        font-size: 30px;
+    }
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+    .about-sec-1, .about-sec-2 {
+        flex-basis: 100%;
+    }
+    .about-sec-1 {
+        margin-bottom: 30px;
+    }
+    .about-sec-2 {
+        font-size: 14px;
+    }
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    footer {
+        font-size: 14px;
+    }
+}
+
+
+/*hover opacity effect*/
+#experience-paragraph li:hover, #experience-paragraph li:focus, 
+#skills-list li:hover, #skills-list li:focus, 
+#connect-list li:hover, #connect-list li:focus {
+    opacity: 0.75;
 }

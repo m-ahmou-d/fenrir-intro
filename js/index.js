@@ -12,10 +12,10 @@ const skills = [
     "Java",
     "JavaScript",
     "HTML",
-    "C++",
     "CSS",
-    "English & Arabic Translator",
-    "Word, Excel, and PowerPoint"
+    "C++",
+    "GIT",
+    "Biliteracy Certified (English-Arabic)"
 ];
 const skillsSection = document.querySelector('#skills');
 const skillsList = skillsSection.querySelector('ul');
@@ -39,14 +39,15 @@ messageForm.addEventListener('submit', function(event) {
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `
-    <a href = "mailto:${email}">${name}</a>
-    <span >${message}</span>`;
+    <a href = "mailto:${email}">${name} wrote:<br></a>
+    <span>${message}<br></span>`;
 
 //button to remove message
 const removeButton = document.createElement('button');
 function makeRemoveButton() {
     removeButton.innerText = 'Remove';
     removeButton.type = 'button';
+    removeButton.className = 'button button2 form-button';
     newMessage.append(removeButton);
 };
     makeRemoveButton();
@@ -59,14 +60,15 @@ const editButton = document.createElement('button');
 function makeEditButton() {
     editButton.innerText = 'Edit';
     editButton.type = 'button';
+    editButton.className = 'button button2 form-button';
     newMessage.append(editButton);
 };
     makeEditButton();
     editButton.addEventListener('click', () => {
         const editedMessage = prompt('Updated message: ');
         if(editedMessage !== null){
-            newMessage.innerHTML = `<a href = "mailto:${email}">${name}</a>
-            <span>${editedMessage}</span>`;
+            newMessage.innerHTML = `<a href = "mailto:${email}">${name} wrote:<br></a>
+            <span>${editedMessage}<br></span>`;
             makeEditButton();
             makeRemoveButton();
         }
