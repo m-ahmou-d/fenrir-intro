@@ -36,21 +36,6 @@
     </div> 
 </div>
 
-
-<!--adding script for mobile nav bar menu-->
-
-<script>
-
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-200px";
-    }
-
-</script>
-
 <!-- about & skills/education section -->
 
 <div id="about">
@@ -89,26 +74,6 @@
         </div>
     </div>
 </div>
-
-<!--adding script for the 'onetab' showing which skills/experience tab is active-->
-
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname) {
-        for(tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-</script>
 
 <!-- projects section -->
 
