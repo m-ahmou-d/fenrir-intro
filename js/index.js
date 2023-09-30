@@ -79,3 +79,23 @@ function makeEditButton() {
     messageList.appendChild(newMessage);
     messageForm.reset();
 });
+
+
+let githubRequest = new XMLHttpRequest();
+
+githubRequest.open('GET', 'https://api.github.com/users/m-ahmou-d/repos');
+githubRequest.send();
+
+githubRequest.addEventListener('load', (event) => {
+    let repositories = JSON.parse(githubRequest.response)
+    console.log(repositories);
+
+    const projectSection = document.getElementById('projects')
+    const projectList = projectSection.querySelector('ul')
+
+    for (let i = 0; i < repositories.length; i++) {
+        let project = document.createElement('li')
+        project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`
+        projectList.appendChild(project)
+    }
+});
